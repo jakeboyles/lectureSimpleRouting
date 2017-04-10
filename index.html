@@ -11,18 +11,27 @@
 
   <header>
     <div class="container">
-      <ul>
-        <li><a ui-sref='home'>Home</a></li>
-        <li><a ui-sref='blogs'>Blogs</a></li>
-        <!-- <li>Admin</li> -->
-      </ul>
+      <div class="row">
+        <div class="col-md-6">
+          <H2>My Site</H2>
+        </div>
+        <ul class="col-md-6">
+          <li><a ui-sref='home'>Home</a></li>
+          <li><a ui-sref='blogs'>Blogs</a></li>
+          <li><a ui-sref='login'>Login</a></li>
+          <!-- <li>Admin</li> -->
+        </ul>
+      </div>
     </div>
   </header>
 
-  <section ui-view class="container">
-    
 
-  </section>
+  <div class="container">
+    <div class="row">
+      <aside class="col-md-3" ui-view='sidebar'></aside>
+      <section class="col-md-9" ui-view='content'></section>
+    </div>
+  </div>
 
   <footer>
     <p>ALL RIGHTS RESERVED</p>
@@ -42,5 +51,7 @@
     <script src='js/services/API.js'></script>
     <script src='js/controllers/MainController.js'></script>
     <script src='js/controllers/BlogController.js'></script>
+    <script src='js/controllers/SingleBlogController.js'></script>
+    <script src='js/controllers/LoginController.js'></script>
   </body>
 </html>
