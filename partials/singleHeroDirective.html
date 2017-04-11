@@ -1,0 +1,35 @@
+
+<div>
+	<h2>{{character.name}}</h2>
+
+	<div class="row">
+		
+		<div class="col-md-6">
+			<img src="{{character.thumbnail.path}}.{{character.thumbnail.extension}}" alt="">
+		</div>
+
+		<div class="col-md-6">
+			<h3>Description</h3>
+			<p>{{character.description}}</p>
+
+			<h3>Comics</h3>
+
+			<div class="comics" ng-repeat="comic in character.comics.items">
+				<p>{{comic.name}}</p>
+			</div>
+
+			<h3>Series</h3>
+
+			<div class="comics" ng-repeat="series in character.series.items">
+				<p>{{series.name}}</p>
+			</div>
+
+			<h3>Events</h3>
+
+			<div class="comics" ng-repeat="event in character.events.items">
+				<p>{{event.name}}</p>
+			</div>
+		</div>
+
+	</div>
+</div>

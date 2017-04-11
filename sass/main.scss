@@ -1,3 +1,7 @@
+img {
+	max-width:100%;
+}
+
 header {
 	background-color:orange;
 	padding:20px;
@@ -16,12 +20,33 @@ header {
 	}
 }
 
+.homeCharacter {
+	margin-bottom:40px;
+	img {
+		max-height:200px;
+	}
+
+	h3 {
+		height:4em;
+	}
+}
+
 .blog {
 	background-color:darken(#fff,3);
 	margin-bottom:40px;
 	padding:20px;
 }
 
+
+.pagination {
+	margin-top:30px;
+	border-top:2px solid darken(#fff,10);
+	padding-top:30px;
+	.btn {
+		background-color:red;
+		border:2px solid red;
+	}
+}
 footer {
 	background-color:orange;
 	color:#fff;

@@ -5,7 +5,12 @@
         .module('routing')
         .controller('MainController', function(API) {
         	const vm = this;
-            vm.name = "Jake";
+
+            let characters = API.getCharacters(3);
+            characters.then(res=>{
+            	console.log(res);
+            	vm.characters = res.data.data.results;
+            })
         });
      
 })();

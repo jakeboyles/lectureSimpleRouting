@@ -1,3 +1,22 @@
 <h2>Welcome!</h2>
 
-<P>This is jakes blog. Como estas.</P>
+<div class="homeCharacter col-md-4" ng-repeat="character in vm.characters">
+		<img src="{{character.thumbnail.path}}.{{character.thumbnail.extension}}" alt="">
+		<h3>{{character.name}}</h3>
+
+		<a ui-sref="singleCharacter({id:character.id})" class="btn-primary btn">Learn More</a>
+
+</div>
+
+
+<div class="col-md-12">
+	<H2>Featured Character of the month</H2>
+
+		<single-character id="1009156"></single-character>
+
+</div>
+
+
+
+
+

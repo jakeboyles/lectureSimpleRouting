@@ -6,22 +6,23 @@
         .factory('API', function($http){
 
 			return {
-			    getBlogs:()=>{
+			    getCharacters:(number)=>{
 			    	return $http({
 			    		type:"GET",
-			    		url:"https://tiyagencyweek.herokuapp.com/blogs",
-			    		headers:{X_CSRF_TOKEN:'N5JGY3RWWTW51XZTYVSN'},
+			    		url:`https://gateway.marvel.com:443/v1/public/characters?limit=${number}&apikey=b6062bed9e11b13c24966ba8226a381f`,
 			    	})
 			    },
-			    getSingleBlog:(id)=>{
+			    getSingleCharacter:(id) => {
 			    	return $http({
 			    		type:"GET",
-			    		url:`https://tiyagencyweek.herokuapp.com/blogs/${id}`,
-			    		headers:{X_CSRF_TOKEN:'N5JGY3RWWTW51XZTYVSN'},
+			    		url:`https://gateway.marvel.com:443/v1/public/characters/${id}?apikey=b6062bed9e11b13c24966ba8226a381f`,
 			    	})
 			    },
-			    login:(data) => {
-			    	return $http.post('https://tiyagencyweek.herokuapp.com/auth/login',data);
+			    getCharactersByPage:(page) => {
+			    	return $http({
+			    		type:"GET",
+			    		url:`https://gateway.marvel.com:443/v1/public/characters?limit=20&offset=${20*page}&apikey=b6062bed9e11b13c24966ba8226a381f`,
+			    	})
 			    }
 		  	};
         });

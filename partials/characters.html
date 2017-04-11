@@ -1,0 +1,21 @@
+<h1>Character Page</h1>
+
+<div class="homeCharacter col-md-4" ng-repeat="character in vm.characters">
+		<img src="{{character.thumbnail.path}}.{{character.thumbnail.extension}}" alt="">
+		<h3>{{character.name}}</h3>
+
+		<a ui-sref="singleCharacter({id:character.id})" class="btn-primary btn">Learn More</a>
+
+</div>
+
+<div class="pagination col-md-12">
+
+	<div class="pull-left" ng-if="vm.page>1">
+		<a class="btn-primary btn" ui-sref="charactersPage({page:vm.page-1})">< Previous</a>
+	</div>
+
+	<div class='pull-right' ng-if="vm.page!=vm.lastPage">
+		<a class="btn-primary btn" ui-sref="charactersPage({page:vm.page+1})">Next ></a>
+	</div>
+
+</div>
