@@ -12,7 +12,7 @@
   <header>
     <div class="container">
       <div class="row">
-        <div class="col-md-6">
+        <div class="col-md-3">
           <H2>My Site</H2>
         </div>
         <ul class="col-md-6">
@@ -20,6 +20,9 @@
           <li><a ui-sref='charactersPage({page:1})'>Characters</a></li>
           <!-- <li>Admin</li> -->
         </ul>
+        <div class='col-md-3'>
+          <weather city="cincinnati"></weather>
+        </div>
       </div>
     </div>
   </header>
@@ -31,8 +34,21 @@
     </div>
   </div>
 
-  <footer>
+  <footer class="clearfix">
     <p>ALL RIGHTS RESERVED</p>
+    <div class='col-md-3'>
+    <weather city="Pyonyang"></weather>
+    </div>
+    <div class='col-md-3'>
+    <weather city="Russia"></weather>
+    </div>
+    <div class='col-md-3'>
+    <weather city="Mexico"></weather>
+    </div>
+    <div class='col-md-3'>
+    <weather city="Georgia"></weather>
+    </div>
+    </div>
   </footer>
     
 
@@ -47,6 +63,7 @@
 
     <script src='js/main.js'></script>
     <script src='js/directives/singleCharacter.js'></script>
+    <script src='js/directives/weather.js'></script>
     <script src='js/services/API.js'></script>
     <script src='js/controllers/MainController.js'></script>
     <script src='js/controllers/SingleHeroController.js'></script>

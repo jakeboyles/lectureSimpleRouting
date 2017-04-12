@@ -8,7 +8,6 @@
 
             let characters = API.getCharacters(3);
             characters.then(res=>{
-            	console.log(res);
             	vm.characters = res.data.data.results;
             })
         });

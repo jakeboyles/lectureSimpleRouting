@@ -1,0 +1,13 @@
+
+<div class="row weatherDirective">
+
+	<div class="col-md-9">
+		<h2>The weather today is: {{weather.main.temp}}&deg; in {{weather.name}}</h2>
+		<p>{{weather.weather[0].description}}</p>
+	</div>
+
+	<div class="col-md-3">
+		<img src="http://openweathermap.org/img/w/{{weather.weather[0].icon}}.png">
+	</div>
+
+</div>
